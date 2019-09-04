@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_layout/page/fittedbox_aspectratio_constrainedbox.dart';
 
 import 'page/Containerpage.dart';
+import 'page/bl_fs_lh_lw.dart';
 import 'page/padding_align_center_page.dart';
 
 void main() => runApp(MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       routes: <String,WidgetBuilder>{
         "containerpage":(context)=>containerpage(),
         "pac":(context)=>pacpage(),
-        "fac":(context)=>facpage()
+        "fac":(context)=>facpage(),
+        "bfii":(context)=>bfllpage()
       },
 
 
@@ -60,9 +62,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.of(context).pushNamed("fac");
             },
               child: Text("fittedbox_aspectratio_constrainedbox"),
-              color: Colors.blue,
-            )
+              color: Colors.red,
+            ),
 
+            MaterialButton(onPressed: (){
+              Navigator.of(context).pushNamed("bfii");
+            },
+              child: Text("Baseline、FractionallySizedBox、IntrinsicHeight、IntrinsicWidth"),
+              color: Colors.purpleAccent,
+            )
 
 
 
