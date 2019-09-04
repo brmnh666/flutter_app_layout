@@ -5,6 +5,7 @@ import 'page/Containerpage.dart';
 import 'page/bl_fs_lh_lw.dart';
 import 'page/lb_os_ofb_sb.dart';
 import 'page/padding_align_center_page.dart';
+import 'page/row_column.dart';
 import 'page/s_t_c.dart';
 
 void main() => runApp(MyApp());
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         "fac":(context)=>facpage(),
         "bfii":(context)=>bfllpage(),
         "loos":(context)=>loospage(),
-        "stc":(context)=>stcpage()
+        "stc":(context)=>stcpage(),
+        "rc":(context)=>row_column_page()
       },
 
 
@@ -88,6 +90,13 @@ class _MyHomePageState extends State<MyHomePage> {
             },
               child: Text("SizedOverflowBox、Transform、CustomSingleChildLayout"),
               color: Colors.deepPurple,
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.of(context).pushNamed("rc");
+            },
+              child: Text("Row Column"),
+              color: Colors.pinkAccent,
             )
 
 
