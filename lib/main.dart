@@ -3,7 +3,9 @@ import 'package:flutter_app_layout/page/fittedbox_aspectratio_constrainedbox.dar
 
 import 'page/Containerpage.dart';
 import 'page/bl_fs_lh_lw.dart';
+import 'page/lb_os_ofb_sb.dart';
 import 'page/padding_align_center_page.dart';
+import 'page/s_t_c.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +23,9 @@ class MyApp extends StatelessWidget {
         "containerpage":(context)=>containerpage(),
         "pac":(context)=>pacpage(),
         "fac":(context)=>facpage(),
-        "bfii":(context)=>bfllpage()
+        "bfii":(context)=>bfllpage(),
+        "loos":(context)=>loospage(),
+        "stc":(context)=>stcpage()
       },
 
 
@@ -70,7 +74,22 @@ class _MyHomePageState extends State<MyHomePage> {
             },
               child: Text("Baseline、FractionallySizedBox、IntrinsicHeight、IntrinsicWidth"),
               color: Colors.purpleAccent,
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.of(context).pushNamed("loos");
+            },
+              child: Text("LimitedBox、Offstage、OverflowBox、SizedBox"),
+              color: Colors.pink,
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.of(context).pushNamed("stc");
+            },
+              child: Text("SizedOverflowBox、Transform、CustomSingleChildLayout"),
+              color: Colors.deepPurple,
             )
+
 
 
 
