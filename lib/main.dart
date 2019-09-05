@@ -7,6 +7,7 @@ import 'page/lb_os_ofb_sb.dart';
 import 'page/padding_align_center_page.dart';
 import 'page/row_column.dart';
 import 'page/s_t_c.dart';
+import 'page/stack.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         "bfii":(context)=>bfllpage(),
         "loos":(context)=>loospage(),
         "stc":(context)=>stcpage(),
-        "rc":(context)=>row_column_page()
+        "rc":(context)=>row_column_page(),
+        "sig":(context)=>stackpage()
       },
 
 
@@ -97,7 +99,14 @@ class _MyHomePageState extends State<MyHomePage> {
             },
               child: Text("Row Column"),
               color: Colors.pinkAccent,
+            ),
+            MaterialButton(onPressed: (){
+              Navigator.of(context).pushNamed("sig");
+            },
+              child: Text("Stack"),
+              color: Colors.teal,
             )
+
 
 
 
